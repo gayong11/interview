@@ -1,0 +1,108 @@
+// Variables
+@import "variables";
+// Bootstrap
+@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+body {
+  font-family: Hiragino Sans GB, "Hiragino Sans GB", Helvetica, "Microsoft YaHei", Arial, sans-serif;
+}
+
+/* 顶部导航 */
+
+.navbar-static-top {
+  border-color: #e7e7e7;
+  background-color: #fff;
+  box-shadow: 0px 1px 11px 2px rgba(42, 42, 42, 0.1);
+  border-top: 4px solid #00b5ad;
+  margin-bottom: 40px;
+  margin-top: 0px;
+}
+
+/* 底部样式 */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #000;
+
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+
+    p {
+      margin: 19px 0;
+      color: #c1c1c1;
+
+      a {
+        color: inherit;
+      }
+    }
+  }
+}
+
+.root-page {
+  .option {
+    font-size: 18px;
+    margin: 10px 0;
+    padding: 0 15px;
+    color: #4c4c4c;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+    -webkit-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2), inset 0 0 6px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2), inset 0 0 6px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.4);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2), inset 0 0 6px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.4);
+    background: #f6f6f6;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#d4d4d4));
+    background-image: -moz-linear-gradient(top, #f6f6f6, #d4d4d4);
+    border: 1px solid #a1a1a1;
+  }
+  .selected {
+    background: #6fb2e5;
+    -o-box-shadow: 0 1px 5px #0061aa, inset 0 10px 20px #b6f9ff;
+    -webkit-box-shadow: 0 1px 5px #0061aa, inset 0 10px 20px #b6f9ff;
+    -moz-box-shadow: 0 1px 5px #0061aa, inset 0 10px 20px #b6f9ff;
+  }
+  .text-success {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  .markdown-base {
+    margin-bottom: 1em;
+  }
+
+  .CodeMirror, .CodeMirror-scroll {
+    min-height: 200px !important;
+  }
+  blockquote {
+    margin: 20px 0 !important;
+    background-color: #f5f8fc;
+    padding: 1rem;
+    color: #8796a8;
+    border-left: none;
+  }
+  .markdown-reply h1, .markdown-reply h2 {
+    padding-bottom: .3em;
+    border-bottom: 1px solid #eee;
+  }
+  .answer {
+    border: dashed 1px #ccc;
+    background: #ffffff;
+    border-radius: 6px;
+    box-shadow: none;
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+}
