@@ -113,6 +113,16 @@ LOCK TABLES `topic_options` WRITE;
 INSERT INTO `topic_options` VALUES (1,2,'A','aaaa'),(2,2,'B','bbb');
 /*!40000 ALTER TABLE `topic_options` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Dumping data for table `users`
+--
+
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (1,'gao','gaoyongphp@126.com','$2y$10$WHvmTBPoQtIkdMDdw0SU5ueRcrqlGmnCfoK326VfIvFj9tnDA9Tmi','XFkbXYqmWrnzxnHNYKVoFTOwfmBIYuhL2xIi2K81gExedpyaFtQI2pHmMtLO',1,'2019-08-19 02:52:41','2019-08-20 02:42:02'),(2,'demo','demo@163.com','$2y$10$6uJUIlrt8l.LuMrDPRqoxOxW1a2wnVdWNRIsu3PvrGR8APn0mZ3z2','FwQ8hB3AGcTVQjb9fH5TioeHWjcfemtOb9MazAWuxMzbbzkO2RtDvqL6S002',1,'2019-08-20 02:46:33','2019-08-20 02:46:49'),(3,'test','test@123.com','$2y$10$iyzOFYkgpKPHl7W4z2lCbu.iwQTEdrbgLWMAB4FdnXgayZ0kuOOfK','bGonLWuqiSe6KmvzsqfBoRsyALKtTXiGeQCgIJc98TXiRa2LJTYmtpG6AHwu',0,'2019-08-20 02:47:08','2019-08-20 02:47:08');
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -123,4 +133,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-08-21  9:40:47
+-- Dump completed on 2019-08-21 10:35:46
