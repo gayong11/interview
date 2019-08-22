@@ -25,7 +25,6 @@
                     {{ $option->option }}：{{ $option->content }}
                 </div>
             @endforeach
-
         @else
             <div class="markdown-base">
                 <textarea
@@ -38,11 +37,11 @@
             <div class="box preview markdown-reply fluidbox-content" id="preview-box" style="display: none;border: dashed 1px #ccc;background: #ffffff;border-radius: 6px;box-shadow:none;margin-top: 20px;margin-bottom: 6px;padding: 20px;"></div>
         @endif
         <div class="row" style="margin-top: 20px; margin-bottom: 20px">
-            <div class="col-xs-2">
+            <div class="col-xs-2 col-md-2 col-sm-2">
                 <button type="button" class="btn btn-primary active look">查看答案</button>
             </div>
 
-            <div class="col-xs-2 col-md-offset-8">
+            <div class="col-xs-2 col-md-2 col-sm-2 col-md-offset-8">
                 <button type="button" class="btn btn-success active next">下一题</button>
             </div>
         </div>
