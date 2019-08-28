@@ -41,7 +41,7 @@
                 <button type="button" class="btn btn-primary active look">查看答案</button>
             </div>
 
-            <div class="col-xs-2 col-md-2 col-sm-2 col-md-offset-8 col-xs-offset-8 col-sm-offset-8">
+            <div class="col-xs-2 col-md-2 col-sm-2 col-md-offset-8 col-xs-offset-7 col-sm-offset-8">
                 <button type="button" class="btn btn-success active next">下一题</button>
             </div>
         </div>
@@ -133,7 +133,7 @@
                             self.initSimpleMDE(setting);
                         });
                     } else {
-                        console.error('必须先创建好 textarea DOM节点后才可以调用 `init` 方法')
+//                        console.error('必须先创建好 textarea DOM节点后才可以调用 `init` 方法')
                     }
                 }
 
