@@ -38,7 +38,10 @@
         @endif
         <div class="row" style="margin-top: 20px; margin-bottom: 20px">
             <div class="col-xs-2 col-md-2 col-sm-2">
-                <button type="button" class="btn btn-primary active look">查看答案</button>
+                <button type="button" class="btn btn-primary active look">
+                    查看答案
+                    <span class="glyphicon glyphicon-eye-open"></span>
+                </button>
             </div>
 
             <div class="col-xs-2 col-md-2 col-sm-2 col-md-offset-8 col-xs-offset-6 col-sm-offset-8">
@@ -60,14 +63,13 @@
     <script src="/ext/InlineAttachment/dist/codemirror-4.inline-attachment.min.js"></script>
     <script src="/ext/Simplemde_Markdown/HtmlToMarkdown.js"></script>
 
-
     <script>
         $(function () {
             class Markdown{
                 constructor() {
                     this.setting = {
                         'textarea': {
-                            'id': 'markdown-editor',
+                            'id': 'markdown-editor'
                         },
                         'interval': true,
                         'markdown': {
@@ -96,7 +98,7 @@
                                         localStorage.clear();
                                     },
                                     className: "fa fa-trash",
-                                    title: "清除本地缓存",
+                                    title: "清除本地缓存"
                                 },
                                 {
                                     // 自定义标签
@@ -112,7 +114,7 @@
                                         }
                                     },
                                     className: "fa fa-info-circle f_r",
-                                    title: "Markdown 语法！",
+                                    title: "Markdown 语法！"
                                 }
                             ],
                         },
@@ -172,36 +174,6 @@
                 }
             }
 
-
-
-            {{-- 单选 --}}
-            $('.option').click(function () {
-                var value = $(this).data('value');
-                $(this).addClass('selected').siblings().removeClass('selected');
-            });
-
-            {{-- 查看答案 --}}
-            $('.look').click(function () {
-                $('.answer').removeClass('hidden')
-            });
-
-            {{-- 重置 --}}
-            $('.reset').click(function () {
-                axios.post('{{ route('topic.reset') }}', '')
-                    .then(function () {
-                        location.reload();
-                    });
-            });
-
-            {{-- 下一题 --}}
-            $('.next').click(function () {
-                axios.get('{{ route('topic.next') }}')
-                    .then(function () {
-                        location.reload();
-                    })
-            });
-
-
             var markdown = new Markdown();
             markdown.init({
                 'textarea': {
@@ -221,6 +193,42 @@
                         }
                     }
                 }
+            });
+
+            {{-- 单选 --}}
+            $('.option').click(function () {
+                var value = $(this).data('value');
+                $(this).addClass('selected').siblings().removeClass('selected');
+            });
+
+            var status = false;
+            {{-- 查看答案 --}}
+            $('.look').click(function () {
+                if (status) {
+                    status = false;
+                    $('.look').html('查看答案 <span class="glyphicon glyphicon-eye-open"></span>');
+                    $('.answer').addClass('hidden')
+                } else {
+                    status = true;
+                    $('.look').html('隐藏答案 <span class="glyphicon glyphicon-eye-close"></span>');
+                    $('.answer').removeClass('hidden')
+                }
+            });
+
+            {{-- 重置 --}}
+            $('.reset').click(function () {
+                axios.post('{{ route('topic.reset') }}', '')
+                    .then(function () {
+                        location.reload();
+                    });
+            });
+
+            {{-- 下一题 --}}
+            $('.next').click(function () {
+                axios.get('{{ route('topic.next') }}')
+                    .then(function () {
+                        location.reload();
+                    })
             });
         });
     </script>
