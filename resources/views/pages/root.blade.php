@@ -2,6 +2,20 @@
 
 @section('title', '首页')
 
+@section('styles')
+    <style>
+        .root-page .content-preview-area {
+            width: 100%;
+            min-height: 30px;
+            display: none;
+            border: dashed 1px #ddd;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 6px
+        }
+    </style>
+@endsection
+
 @section('content')
     <div class="row">
         <div class="col-xs-9">
